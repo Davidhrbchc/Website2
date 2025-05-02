@@ -4,15 +4,14 @@
     font-family: Play;
 }
 
-
 @font-face {
     font-family: Play;
-    src: url(./fonts/Play/Play-Regular.ttf);
+    src: url(../fonts/Play/Play-Regular.ttf);
 }
 
 @font-face {
     font-family: PlayBold;
-    src: url(./fonts/Play/Play-Regular.ttf);
+    src: url(../fonts/Play/Play-Regular.ttf);
 }
 
 :root {
@@ -28,6 +27,11 @@
     --darkblue: #0B192C;
     --lessdarkblue: #0e1d33;
     --orangergb: 255, 101, 0;
+}
+
+body {
+    background: var(--darkblue);
+
 }
 
 .formular-conteiner {
@@ -57,11 +61,12 @@
 }
 
 h4 {
-    color: var(--orange);
+    color: var(--text);
     font-size: 2rem;
 }
 
 h1 {
+    color: var(--orange);
     margin-top: 5vh;
 }
 
@@ -114,13 +119,13 @@ input[type="submit"] {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: center;
+    align-items: center;
     gap: 25px;
 }
 
 .socialni-site .fa {
-    color: var(--orange);
+    color: var(--text);
 }
 
 @media (min-width: 1024px) {
