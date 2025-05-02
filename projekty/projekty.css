@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+/*
+Font: Play
+Author: Jonas Hecksher, Playtypes, e-types AS (lasse@e-types.com)
+License: SIL Open Font License v1.1 – https://openfontlicense.org
+Reserved Font Names: "Play", "Playtype", "Playtype Sans"
+*/
+
+@font-face {
+    font-family: Play;
+    src: url(../fonts/Play/Play-Regular.ttf);
+}
+
+@font-face {
+    font-family: PlayBold;
+    src: url(../fonts/Play/Play-Bold.ttf);
+}
+
+
+:root {
+    --navbar: #0B192C;
+    --body: #3674B5;
+    --orange: #FF6500;
+    --text: #3674B5;
+    --backgroudn: #04080f;
+    --picorange: #FF6500;
+    --textrgb: 30, 62, 98;
+    --bodyrgb: 11, 25, 44;
+    --text2: #1E3E62;
+    --darkblue: #0B192C;
+    --lessdarkblue: #0e1d33;
+    --orangergb: 255, 101, 0;
+}
+
+body {
+    background: var(--darkblue);
+    overflow-x: hidden;
+    font-family: Play;
+}
+
+.mainsite {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to bottom, rgba(var(--bodyrgb), 0.5) 0%, rgba(var(--bodyrgb), 1) 80%), url(../pictures/code.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.mainsite h1 {
+    color: var(--orange);
+    font-size: 5rem;
+}
+
+.firstpagetext-animation {
+    transition: opacity 0.5s ease;
+
+    opacity: 1;
+}
+
+.button-cont {
+    position: absolute;
+    top: 100vh;
+    left: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.pleasebestretch {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.buttontopen {
+    display: none;
+}
+
+.projectbutton {
+    align-items: center;
+    background-color: var(--text2);
+    border: 0;
+    border-radius: 0px;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bolder;
+    justify-content: center;
+    line-height: 20px;
+    width: auto;
+    
+    height: auto;
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  
+  .projectbutton:hover,
+  .projectbutton:active { 
+    background-color: var(--text2);
+    color: var(--backgroudn);
+  }
+
+.projects {
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 45px;
+    flex-wrap: wrap;
+
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+}
+
+.project-img {
+    width: 100%;
+    height: 50%;
+    max-height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.project-content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: var(--lessdarkblue);
+    gap: 15px;
+    padding: 20px 0px;
+
+}
+
+.project h3 {
+    color: var(--text2);
+    font-size: 2rem;
+    width: 90%;
+}
+.project p {
+   color: var(--text);
+   font-size: 1.1rem;
+   width: 90%;
+}
+.project-content-more {
+    display: flex;
+    width: 90%;
+
+}
+.project-lang {
+    color: var(--text);
+    background-color: var(--darkblue);
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.project-content button {
+    margin-left: 10px;
+    width: 80%;
+}
+
+.buttonblue {
+  align-items: center;
+  background-color: var(--text);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: var(--text2);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: bolder;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 70%;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.buttonblue:hover,
+.buttonblue:focus { 
+  background-color: var(--darkblue);
+  color: var(--backgroudn);
+}
+
+.buttonblue:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.buttonblue:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+@media (min-width: 1300px) { 
+    .project {
+        width: 20%;  
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) { 
+    .project {
+        width: 35%;  
+    }
+}
+
+@media (min-width: 580px) and (max-width: 768px) {
+    .project {
+        width: 55%;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 580px) {
+    .project {
+        width: 60%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .project {
+        width: 90%;
+    }
+}
+
+
+
