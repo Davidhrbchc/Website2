@@ -49,3 +49,20 @@ function moveFirstInfo() {
 
 window.addEventListener('resize', moveFirstInfo);
 window.addEventListener('load', moveFirstInfo);
+
+let lastWidth = window.innerWidth;
+
+window.addEventListener('resize', () => {
+  const currentWidth = window.innerWidth;
+
+  if ((lastWidth < 1024 && currentWidth >= 1024) ||
+      (lastWidth >= 1024 && currentWidth < 1024) ||
+      (lastWidth < 725 && currentWidth >= 725) ||
+      (lastWidth >= 725 && currentWidth < 725)) {
+    location.reload();
+  }
+
+  lastWidth = currentWidth;
+});
+
+
