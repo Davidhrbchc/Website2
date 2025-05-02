@@ -33,7 +33,7 @@ function moveFirstInfo() {
     }
   }
 
-  if (window.innerWidth <= 725) {
+  if (window.innerWidth <= 768) {
     rollDivs.forEach(div => {
       const svg = div.querySelector('svg');
       if (svg) {
@@ -57,8 +57,8 @@ window.addEventListener('resize', () => {
 
   if ((lastWidth < 1024 && currentWidth >= 1024) ||
       (lastWidth >= 1024 && currentWidth < 1024) ||
-      (lastWidth < 725 && currentWidth >= 725) ||
-      (lastWidth >= 725 && currentWidth < 725)) {
+      (lastWidth < 768 && currentWidth >= 768) ||
+      (lastWidth >= 768 && currentWidth < 768)) {
     location.reload();
   }
 
