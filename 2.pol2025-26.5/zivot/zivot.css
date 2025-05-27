@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0; 
+    scroll-behavior: smooth;
+}
+/*
+Font: Play
+Author: Jonas Hecksher, Playtypes, e-types AS (lasse@e-types.com)
+License: SIL Open Font License v1.1 – https://openfontlicense.org
+Reserved Font Names: "Play", "Playtype", "Playtype Sans"
+
+Font: Saira Stencil  
+Author: The Saira Stencil Project Authors (https://github.com/Omnibus-Type/Saira/SairaStencil)  
+License: SIL Open Font License v1.1 – https://openfontlicense.org  
+Reserved Font Names: "Saira", "Saira Stencil"
+*/
+
+@font-face {
+    font-family: Play;
+    src: url(../fonts/Play/Play-Regular.ttf);
+}
+
+@font-face {
+    font-family: PlayBold;
+    src: url(../fonts/Play/Play-Bold.ttf);
+}
+
+@font-face {
+    font-family: Saira;
+    src: url(../fonts/Saira_Stencil_One/SairaStencilOne-Regular.ttf);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translate(-20px);
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0px);
+    transition: transform 0.8s, opacity 0.8s;
+}
+
+:root {
+    --navbar: #0B192C;
+    --body: #3674B5;
+    --orange: #FF6500;
+    --text: #3674B5;
+    --backgroudn: #04080f;
+    --picorange: #FF6500;
+    --textrgb: 30, 62, 98;
+    --bodyrgb: 11, 25, 44;
+    --text2: #1E3E62;
+    --darkblue: #0B192C;
+    --lessdarkblue: #0e1d33;
+    --orangergb: 255, 101, 0;
+}
+
+body {
+    background: var(--darkblue);
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    font-family: Play;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.main {
+    width: 100%;
+    height: 100vh;
+   
+ 
+}
+
+
+.obdelnik {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+   
+}
+
+.roh {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 5px solid var(--orange);
+
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+    
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.inside-obdelnik {
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: var(--text);
+    font-size: 5rem;
+    font-family: Saira;
+}
+
+h2:nth-child(1) {
+    color: var(--text);
+    font-size: 2.2rem;
+}
+
+h2 {
+    color: var(--text);
+    font-size: 2rem;
+}
+
+.mainsvg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 45vh;
+    z-index: -3;
+}
+
+.mysvg {
+    width: 50vh;
+}
+
+.first-content {
+    background: 
+    repeating-linear-gradient(90deg, #0e1f36 0px, #0e1f36 1px, transparent 2px, transparent 8px),
+    repeating-linear-gradient(0deg, #0e1f36 0px, #0e1f36 1px, transparent 2px, transparent 8px);
+    width: 100%;
+
+    padding: 10vh 0vh;
+    
+}
+
+.textcont h3, .first-content h3 {
+    color: var(--orange);
+    font-size: 3rem;
+}
+.mylife {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    margin: 2vh 0;
+}
+
+.mylife:nth-child(2) {
+    margin-top: 10vh;
+}
+.mylife-cont {
+    width: 50%;
+    height: 100%;
+}
+.textcont {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 80%;
+}
+
+p {
+    color: var(--text);
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.secondsvg {
+    width: 30vh;
+}
+
+.thirdsvg {
+    width: 60vh;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+li {
+    list-style-type: circle;
+    list-style-position: inside;
+    color: var(--text);
+    font-size: 1.5rem;
+}
+
+li:nth-child(1).hidden {
+    transition-delay: 0.2s;
+}
+li:nth-child(2).hidden {
+    transition-delay: 0.4s;
+}
+li:nth-child(3).hidden {
+    transition-delay: 0.6s;
+}
+li:nth-child(4).hidden {
+    transition-delay: 0.8s;
+}
+
+@media (min-width: 900px) and (max-width: 2560px){
+    h1 {
+        font-size: clamp(2.5rem, 1.8571rem + 1.3393vw, 4rem);
+        text-align: center;
+    }
+    
+    h2:nth-child(1) {
+        font-size: clamp(1.7rem, 1.5714rem + 0.2679vw, 2rem);
+      
+    }
+    
+    h2 {
+        font-size: clamp(1.5rem, 1.3714rem + 0.2679vw, 1.8rem);
+        text-align: center;
+    }
+
+    .textcont h3, .first-content h3 {
+        font-size: clamp(2.5rem, 2.3286rem + 0.3571vw, 2.9rem);
+    }
+
+    p {
+        font-size: clamp(1.2rem, 0.9429rem + 0.5357vw, 1.8rem);
+
+    }
+
+    li {
+        font-size: clamp(1.2rem, 0.9429rem + 0.5357vw, 1.8rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .obdelnik {
+        width: 90%;
+        height: 75%;
+    }
+
+    .inside-obdelnik {
+        width: 90%;
+        height: 80vh;
+        margin-top: 10vh;
+        gap: 5px;
+        position: relative;
+        z-index: 100;
+    }
+
+    .mylife {
+
+        height: auto;
+        flex-direction: column;
+        gap: 30px;
+        margin: 15vh 0;
+    }
+    .mylife-cont {
+        width: 100%;
+        height: auto;
+    }
+    .mylife:nth-child(even) .mylife-cont:nth-of-type(1) {
+        order: 2;
+    }
+    .mylife:nth-child(even) .mylife-cont:nth-of-type(2) {
+        order: 1;
+    }
+
+    .mainsvg {
+        position: absolute;
+        bottom: -60vh;
+   
+    }
+
+    .content {
+        margin-top: 60vh;
+    }
+    h1 {
+        font-size: clamp(2rem, 2rem + 2.0833vw, 3rem);
+        text-align: center;
+    }
+    
+    h2:nth-child(1) {
+        font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+      
+    }
+    
+    h2 {
+        font-size: clamp(1.3rem, 1.3rem + 1.0417vw, 1.8rem);
+        text-align: center;
+    }
+
+    .textcont h3, .first-content h3 {
+        font-size: clamp(1.5rem, 1.5rem + 2.0833vw, 2.5rem);
+    }
+
+    p {
+        font-size: clamp(1rem, 1rem + 0.4167vw, 1.2rem);
+
+    }
+
+    li {
+        font-size: clamp(1rem, 1rem + 0.4167vw, 1.2rem);
+    }
+}
