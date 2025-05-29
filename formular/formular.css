@@ -367,3 +367,11 @@ input[type="submit"] {
         height: 20px;
     }
 }
+
+@media (min-height: 700px) {
+      .formular-conteiner {
+        height: auto;
+
+    }
+
+}
