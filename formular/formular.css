@@ -368,7 +368,7 @@ input[type="submit"] {
     }
 }
 
-@media (min-height: 700px) {
+@media (max-height: 700px) {
       .formular-conteiner {
         height: auto;
 
