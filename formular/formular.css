@@ -369,7 +369,7 @@ input[type="submit"] {
 }
 
 @media (max-height: 700px) {
-      .formular-conteiner {
+       .formular-left,  .formular-right {
         height: auto;
 
     }
