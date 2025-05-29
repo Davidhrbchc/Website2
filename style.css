@@ -865,6 +865,9 @@ h1 {
 }
 
 @media (max-width: 425px) {
+     .lang-tooltip::after {
+        width: auto;
+    }
     .rollingimages-pcconteiner {
         position: absolute;
         display: flex;
@@ -945,6 +948,9 @@ h1 {
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
+     .lang-tooltip::after {
+        width: auto;
+    }
     .rollingimages-pcconteiner {
         position: absolute;
         display: flex;
