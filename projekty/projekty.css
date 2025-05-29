@@ -316,6 +316,12 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
+    .lang-tooltip::after {
+    width: auto;
+
+}
+    
 }
 /* TEXTY */
 
