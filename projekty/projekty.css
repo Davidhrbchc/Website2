@@ -295,7 +295,7 @@ body {
     }
 }
 
-@media (min-width: 320px) and (max-width: 450px) {
+@media (min-width: 100px) and (max-width: 450px) {
     .project {
         width: 90%;
     }
