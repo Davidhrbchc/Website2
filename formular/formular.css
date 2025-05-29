@@ -369,8 +369,9 @@ input[type="submit"] {
 }
 
 @media (max-height: 700px) {
-       .formular-left,  .formular-right {
+   .formular-left,  .formular-right {
         height: auto;
+        min-height: 85vh;
 
     }
 
