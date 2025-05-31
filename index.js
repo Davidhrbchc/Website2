@@ -18,7 +18,7 @@ function movingThings() {
     }
   }
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 767) {
     rollDivs.forEach(div => {
       const svg = div.querySelector('svg');
       if (svg) {
