@@ -7,7 +7,7 @@ const rollingimages = document.querySelector('.rollingimages');
 const svg = document.querySelectorAll('.svg');
 
 function movingThings() {
-  if (window.innerWidth >= 1024) {
+  if (window.innerWidth >= 768) {
     if (!mainText.contains(firstInfo)) {
       mainText.appendChild(firstInfo);
     }
@@ -37,9 +37,7 @@ let lastWidth = window.innerWidth;
 window.addEventListener('resize', () => {
   const currentWidth = window.innerWidth;
 
-  if ((lastWidth < 1024 && currentWidth >= 1024) ||
-      (lastWidth >= 1024 && currentWidth < 1024) ||
-      (lastWidth < 768 && currentWidth >= 768) ||
+  if ((lastWidth < 768 && currentWidth >= 768) ||
       (lastWidth >= 768 && currentWidth < 768)) {
     location.reload();
   }
